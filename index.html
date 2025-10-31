@@ -1,67 +1,265 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MAXALECOM INVEST — Conseil & Investissement • Saint‑Cyprien</title>
+<meta name="description" content="MAXALECOM INVEST • Conseil opérationnel et accompagnement d'investissement à Saint‑Cyprien (66750). Diagnostic, stratégie, pilotage de projets." />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="MAXALECOM INVEST — Conseil & Investissement" />
+<meta property="og:description" content="Diagnostic, stratégie et pilotage de projets. Saint‑Cyprien, Pyrénées‑Orientales." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.advgazeta.ru/upload/iblock/fb2/Distant_digital_1.jpg" />
+<meta property="og:locale" content="fr_FR" />
+<link rel="icon" href="https://www.netexplorer.fr/wp-content/uploads/2024/10/Secteur-Droit-et-justice-scaled.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#0ea5a4;   /* teal */
+    --accent:#38bdf8;    /* sky */
+    --ink:#0b1220;       /* deep header */
+    --text:#334155;      /* slate-600 */
+    --muted:#64748b;     /* slate-500 */
+    --bg:#f1f5f9;        /* slate-100 */
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{opacity:.9}
+
+  /* En‑tête */
+  header{
+    background:linear-gradient(120deg,#0b1220,#0d2c3a,#0b1220);background-size:300% 300%;animation:gradientShift 18s ease infinite;
+    color:#fff;padding:24px 16px;border-bottom:6px solid var(--accent);
+  }
+  .wrap{max-width:1120px;margin:auto;padding:0 14px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:48px;height:48px;border-radius:10px;border:2px solid var(--accent);object-fit:cover}
+  .brand h1{margin:0;font-size:1.7rem;letter-spacing:.2px}
+  .tagline{margin:2px 0 0;color:#bae6fd}
+
+  nav{background:#0d2c3a}
+  nav .navwrap{max-width:1120px;margin:auto;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:12px}
+  nav a{color:#fff;font-weight:800;padding:8px 10px;border-radius:8px}
+  nav a:hover{background:rgba(255,255,255,.08)}
+
+  /* Héros */
+  .hero{max-width:1120px;margin:26px auto;display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center;padding:0 14px}
+  .hero img{width:100%;border-radius:16px;border:4px solid #e2e8f0;object-fit:cover}
+  .panel{background:var(--white);border-left:6px solid var(--primary);border-radius:14px;padding:18px}
+  .panel h2{margin:0 0 8px;color:#0f172a}
+  .tag{display:inline-block;background:#ccfbf1;border:1px solid #99f6e4;color:#115e59;border-radius:999px;padding:6px 12px;margin:6px 6px 0 0;font-size:.9rem}
+
+  /* Sections */
+  .section{max-width:1120px;margin:22px auto;background:var(--white);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .section h2{margin:0 0 12px;color:#111}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+  .card{background:#f8fafc;border:1px solid #e5e7eb;border-left:6px solid var(--primary);border-radius:10px;padding:12px;transition:.3s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 6px 12px rgba(0,0,0,.08)}
+
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .feature{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+  .feature h3{margin:0 0 6px}
+  .muted{color:var(--muted)}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+  .gallery img{width:100%;border-radius:10px;border:2px solid #e2e8f0;object-fit:cover;aspect-ratio:4/3;transition:.35s;background:#fff}
+  .gallery img:hover{transform:scale(1.04);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+
+  .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:var(--primary);color:#fff;padding:12px 16px;border-radius:10px;font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:transform .2s ease, box-shadow .2s ease}
+  .btn.secondary{background:#fff;color:#0f172a;border:2px solid #0f172a}
+  .btn.accent{background:var(--accent);color:#0b1020}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+
+  .map{max-width:1120px;margin:16px auto;border-radius:12px;overflow:hidden;border:3px solid var(--primary)}
+  .map iframe{width:100%;height:360px;border:0;display:block}
+
+  footer{background:#0b1220;color:#fff;text-align:center;padding:18px;margin-top:26px;border-top:6px solid var(--accent)}
+
+  .bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffd9;backdrop-filter:blur(6px);display:flex;gap:10px;justify-content:center;padding:10px;border-top:2px solid var(--primary);z-index:999}
+  .bar a{background:#0b1220;color:#fff;padding:10px 14px;border-radius:999px;font-weight:800}
+  .bar a:nth-child(2){background:var(--accent);color:#0b1020}
+  @media(min-width:820px){.bar{display:none}}
+  @media(max-width:980px){.hero{grid-template-columns:1fr}}
+
+  /* Animations */
+  @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+</style>
+
+<!-- Données structurées -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"MAXALECOM INVEST",
+  "url":"https://exemple.fr/",
+  "image":"https://www.advgazeta.ru/upload/iblock/fb2/Distant_digital_1.jpg",
+  "logo":"https://www.netexplorer.fr/wp-content/uploads/2024/10/Secteur-Droit-et-justice-scaled.jpg",
+  "telephone":"+33-7-45-63-52-91",
+  "email":"info@karmava.shop",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"RUE HENRY BORDEAUX",
+    "postalCode":"66750",
+    "addressLocality":"SAINT-CYPRIEN",
+    "addressRegion":"OCCITANIE",
+    "addressCountry":"FR"
+  },
+  "areaServed":"Pyrénées‑Orientales et France",
+  "description":"Conseil opérationnel, accompagnement d'investissement et pilotage de projets"
+}
+</script>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header role="banner">
+  <div class="wrap">
+    <a class="brand" href="#haut" aria-label="Accueil MAXALECOM INVEST">
+      <img src="https://www.netexplorer.fr/wp-content/uploads/2024/10/Secteur-Droit-et-justice-scaled.jpg" alt="Logo MAXALECOM INVEST">
+      <div>
+        <h1>MAXALECOM INVEST</h1>
+        <p class="tagline">Conseil & Investissement • Saint‑Cyprien (66750)</p>
+      </div>
+    </a>
+  </div>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<nav aria-label="Navigation principale" role="navigation">
+  <div class="navwrap">
+    <a href="#apropos">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HÉROS -->
+<section class="hero reveal" id="haut">
+  <img src="https://www.advgazeta.ru/upload/iblock/fb2/Distant_digital_1.jpg" alt="Analyse de données et stratégie d'investissement">
+  <div class="panel" aria-label="Introduction">
+    <h2>Clarté. Stratégie. Exécution.</h2>
+    <p>Diagnostic, feuille de route et pilotage pour vos projets d’investissement et de développement. Interventions à Saint‑Cyprien et à distance.</p>
+    <div>
+      <span class="tag">📊 Diagnostic & Audit</span>
+      <span class="tag">🚀 Stratégie & Go‑to‑market</span>
+      <span class="tag">🧭 PMO & Pilotage</span>
+      <span class="tag">📞 Devis rapide</span>
     </div>
-  </section>
+    <div class="cta">
+      <a class="btn accent" href="tel:+33745635291" aria-label="Appeler MAXALECOM INVEST au 07 45 63 52 91">📞 Appeler : +33 7 45 63 52 91</a>
+      <a class="btn secondary" href="mailto:info@karmava.shop" aria-label="Envoyer un email à MAXALECOM INVEST">✉️ Email : info@karmava.shop</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<!-- À PROPOS -->
+<section id="apropos" class="section reveal" aria-labelledby="apropos-h">
+  <h2 id="apropos-h">À propos</h2>
+  <p><strong>MAXALECOM INVEST</strong> accompagne PME et porteurs de projets sur la définition d’objectifs, la structuration des plans d’actions et la mise en œuvre opérationnelle.</p>
+  <p><strong>Adresse :</strong> RUE HENRY BORDEAUX, 66750 SAINT‑CYPRIEN, FRANCE •
+     <strong>Email :</strong> <a href="mailto:info@karmava.shop">info@karmava.shop</a> •
+     <strong>Téléphone :</strong> <a href="tel:+33745635291">+33 7 45 63 52 91</a></p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section reveal" aria-labelledby="services-h">
+  <h2 id="services-h">Services</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Audit & Diagnostic</h3>
+      <p>Analyse des besoins, cartographie des risques/opportunités, recommandations priorisées.</p>
+    </div>
+    <div class="feature">
+      <h3>Stratégie d’Investissement</h3>
+      <p>Scénarios, business plans indicatifs, indicateurs de performance (KPI) et suivi.</p>
+    </div>
+    <div class="feature">
+      <h3>Transformation & PMO</h3>
+      <p>Structuration des projets, gouvernance, gestion des délais et des parties prenantes.</p>
+    </div>
+    <div class="feature">
+      <h3>Accompagnement Opérationnel</h3>
+      <p>Coaching des équipes, mise en place d’outils de pilotage et reporting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" class="section reveal" aria-labelledby="galerie-h">
+  <h2 id="galerie-h">Galerie</h2>
+  <div class="gallery">
+    <img src="https://www.advgazeta.ru/upload/iblock/fb2/Distant_digital_1.jpg" alt="Analyse financière sur écran">
+    <img src="https://www.netexplorer.fr/wp-content/uploads/2024/10/Secteur-Droit-et-justice-scaled.jpg" alt="Conformité et gouvernance">
+    <img src="https://yandex-images.clstorage.net/bnuy99335/e1e9049X0o9S/inZ0jOe4ckzY90PELdpHfqZHSkPF-mowW-ui2emErCat7SjVHgtG7COy9vAvmKPMyJdQJNUmJ_cDVi3O0wceBw4ysLj23fdoaZOHBF1KBooXk8pHtD9KgSpe8j1poUmTratbMokpIEvw1UGX2DwDuV2SNPUwI6dklacNu0KzzqC6tHXOskqwXS4EY6b9WibLdrY7pUZvqgLcvLNPDKNcVqoa-0OpmoPoUudRlxueo9uu01QRsiP21vcirNriMD8CiwSnzNIpkW7eJBCXnsllenXn2-d0H7phvkzy_r7Q_DQYewoiSyhRWfEnwvbaX_NbXqKmUZEgVZYHMA8b4wEeUdpHNTyhSfC_vzbxdk14Bpvnp9oWJD1KEF0MIlzsgQ3mClubovvZU4uh5pDW2ezjWv1CxVMjUcYn9PG8GQGC_QD6doXtw_gC3z4k4SSduzaK1FX59UWsqbCO7pA-zrNMpdgK2YEaWCE4YPehV3mMocru4HUhoJB3F5UCj3sDgZwjicXEP_MYcK2OhpNnrWsHqocF-HSVP4jxfz3RbD-BP8b72ehC6UsR2oLVoQY6PMDaP2A0YFMyB5ckg825g_DsYqq15K2CaJCcjOdypi1rJopXtYn0J09rMk2ckIx8Ygwk6graEvi5I-tyttMFe8zT6O7BB4EiA6SGxSIc-THzjJAIVwWPkxnDXE9GgrfsCOQKheXrVSXtWlCfL5LPTNAO57oom4P5mcOJsNWTJemfgjqt8yWTIuN29FfQPOjggOzC2_U0jYEL0mxOlXC2Hft0GKc1myf1PNsAnA2yDx2BnKfrqohz6SgDioOFEwe6vVNbTWEmE6DxJCd2c0wLMbDsYapEJO6DaaC-31fBNe0LJJvEBSokR1_YEk6P0mzMst8G6knL45vJUivhtlEl2M6x2x5SpSOQMsckJMNeqbMTzsB5FzcN4mhBX6-EExfOGlZqBfUp1nTMi9K9PJCtE" alt="Pilotage de projets">
+  </div>
+</section>
+
+<!-- CARTE -->
+<section class="map reveal" id="carte-embed" aria-label="Carte">
+  <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=RUE+HENRY+BORDEAUX+66750+SAINT-CYPRIEN+FRANCE&output=embed"
+          title="Carte vers MAXALECOM INVEST"></iframe>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal" aria-labelledby="contact-h">
+  <h2 id="contact-h">Contact & Horaires</h2>
+  <div class="grid">
+    <div>
+      <p>📧 <strong>Email :</strong> <a href="mailto:info@karmava.shop">info@karmava.shop</a></p>
+      <p>📞 <strong>Téléphone :</strong> <a href="tel:+33745635291">+33 7 45 63 52 91</a></p>
+      <p>📍 <strong>Adresse :</strong> Rue Henry Bordeaux, 66750 Saint‑Cyprien, France</p>
+    </div>
+    <div>
+      <p><em>Horaires</em></p>
+      <ul>
+        <li>Lun–Ven : 9:00 – 18:00</li>
+        <li>Sam : Sur rendez‑vous</li>
+        <li>Dim : Fermé</li>
+      </ul>
+      <p class="muted"><small>Entretiens en présentiel ou à distance (visio).</small></p>
+    </div>
+  </div>
+  <div class="cta">
+    <a class="btn accent" href="tel:+33745635291">Appeler maintenant</a>
+    <a class="btn" href="mailto:info@karmava.shop?subject=Demande%20d'informations">Demander un devis</a>
+  </div>
+</section>
+
+<!-- BARRE MOBILE -->
+<div class="bar" role="navigation" aria-label="Actions rapides">
+  <a href="tel:+33745635291">Appeler</a>
+  <a href="mailto:info@karmava.shop">Email</a>
+  <a href="#services">Services</a>
+</div>
+
+<footer role="contentinfo">
+  <p>&copy; 2025 MAXALECOM INVEST — Clarté. Stratégie. Exécution.</p>
+</footer>
+
+<script>
+// Révélation au défilement
+(function(){
+  const addRevealTo = [
+    '.hero', '.hero .panel', '.section', '.feature', '.gallery img', '.map iframe', '.btn'
+  ];
+  const all = document.querySelectorAll(addRevealTo.join(','));
+  all.forEach(el=>el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
 </body>
 </html>
